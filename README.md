@@ -1,6 +1,6 @@
 Hybrid Physics–AI Modelling for Vessel Fuel Consumption and Performance Degradation Detection
 A focused methodological demonstration of hybrid physics-informed residual learning applied to vessel shaft-power prediction and hull-condition (biofouling-proxy) monitoring.
-Author: Mohsen Zeynivand · LinkedIn · m.zeynivand@tudelft.nl
+Author: Mohsen Zeynivand 
 Status: Self-initiated methodological demonstration, May 2026.
 ---
 Scope and honest framing
@@ -43,7 +43,7 @@ cd maritime-hybrid-modelling
 pip install -r requirements.txt
 cd src && python main.py
 ```
-The full pipeline takes < 30 seconds on a laptop. All figures in `figures/` and the metrics in `report/metrics_summary.csv` are regenerated.
+The full pipeline takes < 30 seconds on my pc. All figures in `figures/` and the metrics in `report/metrics_summary.csv` are regenerated.
 Methodological notes
 Why a residual-learning hybrid. Residual learning (`P_hybrid = P_physics + ML_residual`) is the most transparent of the common hybrid patterns: the physics model carries domain knowledge and extrapolates, while the ML component captures the unexplained part of the signal. Any prediction can be decomposed into "what the physics expected" and "what the ML corrected", which matters for maintenance acceptance and for debugging in deployment.
 Why physics calibration on a baseline window matters. Fitting the physics coefficients (admiralty coefficient, wave/wind correction gains) on a clean-hull window grounds the model in a vessel-specific reference state. Subsequent residuals are interpretable as deviations from that reference.

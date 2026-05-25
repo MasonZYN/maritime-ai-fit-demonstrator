@@ -38,7 +38,7 @@ maritime-hybrid-modelling/
 ```
 Reproducing the results
 ```bash
-git clone https://github.com/<your-user>/maritime-hybrid-modelling.git
+git clone (https://github.com/MasonZYN/maritime-ai-fit-demonstrator)
 cd maritime-hybrid-modelling
 pip install -r requirements.txt
 cd src && python main.py
